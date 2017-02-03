@@ -4,7 +4,7 @@
 
 "Interactive Visualization across boundaries: Plotly in R and Python." 
 
-together with [Susann Vorberg](https://github.com/susannvorberg).
+together with [Daniel Bader](https://github.com/baderd).
 
-[slides](https://baderd.github.io/presentations/meetup_visualization/prese_meetup_plotly.slides.html)
+[slides](https://susannvorberg.github.io/presentations/meetup_visualization/prese_meetup_plotly.slides.html#)
 
