@@ -1,0 +1,186 @@
+the_good_the_bad_and_the_ugly
+========================================================
+author: Susann Bader    
+date: 
+autosize: true
+
+Importance of data visualization
+========================================================
+
+- transformation of raw data tables into numeric illustrations
+- reasoning about quantitative information
+
+- communicate complex relationships
+-  tendency to oversimplify --> limitation but also power
+
+
+
+Anscombes Quartet
+========================================================
+- effectively makes the case that looking at summary statistics of data is 
+insufficient to identify the relationship between variables.
+- four different data sets (Anscombe’s quartet) which have nearly 
+identical summary statistics. 
+- All of them have identical descriptive statistics
+- Never trust summary statistics alone; always visualize your data
+-  data have the same mean and variance for x and y, 
+same correlations between x and y, and 
+same regression coefficients on the linear projection of x on y
+
+```{r}
+library(datasets)
+datasets::anscombe
+summary(datasets::anscombe)
+```
+
+Anscombes Quartet Nr 2
+========================================================
+
+![dinosaur_dozen](img/DinoSequentialSmaller.gif)
+
+
+DataViz should tell a story
+========================================================
+
+- what is your incentive?
+- story component is key
+
+
+
+
+
+
+Graphical Integrity and Visual Perception
+========================================================
+
+- does the visual represent the underlying numbers?
+- experiments on visual perception:
+
+e.g. perceived area of a circle grows a bit more slowly than actual area:
+perceived area = (actual area) ^ x x 0.8 =- 0.3
+
+- perceptions differ
+- perceptions change with experience
+- perceptions are context-dependent
+
+
+
+Lie Factor
+========================================================
+
+lie factor = size of effect shown in graphic / size of effect in data
+
+example plot
+
+
+
+Visual Area
+========================================================
+
+- do not use area for one-dimensional data
+- elementary mistake of varying both dimensions in response to changes in one-dimensional data
+- even worse when using three dimension to represent one-dimensional changes (volume of barrel)
+
+example plot: shrinking doctor, corona stats munich
+
+-> number of information-carrying variables depicted should not exceed the number
+of dimensions in the data
+
+
+Context Dependence
+========================================================
+
+- graphics must not quote data out of context
+
+- show more data points to add context
+- show comparible data
+
+
+
+Inflation Adjustment
+========================================================
+
+- when plotting time series of money:
+- value of money changes over time:
+- make comparisons using inflation-adjusted units of money
+
+
+
+Principles for Enhancing Graphical Integrity
+========================================================
+
+- physical measured surface of the representation of a number in a graphic 
+(length of line) should be directly proportional to numerical quantity
+
+- use clear, thorough labeling of the data on the graphic itself
+
+- time-series of money should use deflated and standardized units
+
+-  number of information-carrying variables depicted should not exceed the number
+of dimensions in the data
+
+- graphics must not quote data out of context
+
+
+
+tables:
+- actually show the numbers
+- more efficient in communicating small dataset of less 20 numbers
+- power of graphics comes with large datasets
+
+
+The Good: Principles of Good Statistical graphics
+========================================================
+
+- data-ink ratio = 1.0 - proportion of graphic that can be erased without 
+    loss of data-information
+    
+- data ink: not-erasable core of a graphic; 
+
+- maximize the data-ink ratio
+- erase non-data ink
+- erase redundant data-ink 
+
+example plot page 102
+
+
+The Good: Chart Chunk
+========================================================
+
+
+The Bad: how to lie with charts
+========================================================
+
+
+- don't want to show you how to create deceiving figures
+- but try to avoid common misleading interpretations
+- inform your audience or dont show it at all
+
+
+- Correlation is not causation
+    - only posting falsely similar trends side-by-side when there is a reasonable explanation
+- Similarities now don’t mean similarities forever (curves can bend, current date?)
+- “Mean,” or average, is not the best go-to statistic
+    - outliers can skew the data in one direction or the other
+- the size of the axis, two axis plots with different scalings
+- Abusing the Law of Large Numbers (LLN): 
+    - show data points when there is little data
+    - only large samples can provide trustworthy results
+- 
+
+Grammar of Graphics
+========================================================
+
+- take data values and convert them into visual elements
+- map data values into quantifiable features (=aesthetics)
+    - position
+    - shape
+    - size
+    - color
+
+
+References
+========================================================
+- https://clauswilke.com/dataviz/introduction.html
+- https://www.autodesk.com/research/publications/same-stats-different-graphs
+- https://damassets.autodesk.net/content/dam/autodesk/www/autodesk-reasearch/Publications/pdf/same-stats-different-graphs.pdf
